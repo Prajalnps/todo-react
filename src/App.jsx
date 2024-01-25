@@ -18,6 +18,13 @@ export default function App() {
     setListTodo([...newTodoList])
   }
 
+  //editing item
+  const handleEdit = (index, editedTodo) => {
+    let newTodoList = [...listTodo]
+    newTodoList[index] = editedTodo
+    setListTodo([...newTodoList])
+  }
+
   return (
     <>
       <div className="container h-auto w-auto">
@@ -29,7 +36,7 @@ export default function App() {
           {
             listTodo.map((todo, index) => {
               return (
-                <TodoList key={index} index={index} item={todo} handleDelete={handleDelete} />
+                <TodoList key={index} index={index} item={todo} handleDelete={handleDelete} handleEdit={handleEdit} />
               )
             })
           }

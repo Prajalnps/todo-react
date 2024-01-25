@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <>
-      <div className="container h-full w-full">
+      <div className="container h-auto w-auto">
         <h1 className="text-2xl font-bold m-4">Todo application</h1>
         <InputField addList={addList} />
 
